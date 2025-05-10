@@ -23,8 +23,13 @@
 ## Developer
 
 ---
-- 양원준
-- 이선호
+|-----------------|---------------------|
+|                 |                     |
+|-----------------|---------------------|
+|      양원준       |       이선호         |
+|-----------------|---------------------|
+| mvp ~ front AI  |  mvp ~ backend AI  |
+|-----------------|---------------------|
 
 ## Convention
 
@@ -45,7 +50,7 @@
 
 ## branch
 
-[] </br>
+![Git Folw] (https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/chorong.png) </br>
 
 - main : 서버(Production)에 배포 브렌치
 - develop : 개발이 완료된 후 테스트 서버 브렌치
