@@ -27,7 +27,7 @@
 |                 |   |
 | --- | --- |
 |[양원준(yangwonjoon)](https://github.com/yangwonjoon)|[이선호(08166)](https://github.com/08166)|
-| mvp ~ front AI  |  mvp ~ backend AI  |
+| mvp ~ front ~ AI  |  mvp ~ backend ~ AI  |
 
 
 ## Convention
