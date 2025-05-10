@@ -47,10 +47,10 @@
 | STYLE     | 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우 |
 | REFACTOR  | 코드 리팩토링                       |
 
-## branch
+## Branch 전략
 
-![Git Folw] (https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/chorong.png) </br>
+![Git Flow](https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/chorong.png)
 
-- main : 서버(Production)에 배포 브렌치
-- develop : 개발이 완료된 후 테스트 서버 브렌치
-- feature : 각 기능을 개발하는 브렌치, 기능 개발 단위로 브렌치 생성 {CHORONG-001}
+- main : 서버(Production)에 배포 브랜치
+- develop : 개발이 완료된 후 테스트 서버 브랜치
+- feature : 각 기능을 개발하는 브랜치, 기능 개발 단위로 브랜치 생성 {CHORONG-001}
