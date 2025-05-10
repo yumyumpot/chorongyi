@@ -7,7 +7,7 @@
 
 ---
 ## Architecture
-### server Architecture
+### Server Architecture
 
 [//]: # (<!-- 아키텍처 이미지 그려서 넣을 예정 -->)
 
@@ -24,9 +24,9 @@
 
 ---
 
-|                 |                     |
-|-----------------|---------------------|
-|      양원준       |       이선호         |
+|                 |   |
+| --- | --- |
+|[양원준(yangwonjoon)](https://github.com/yangwonjoon)|[이선호(08166)](https://github.com/08166)|
 | mvp ~ front AI  |  mvp ~ backend AI  |
 
 
@@ -51,6 +51,6 @@
 
 ![Git Flow](https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/chorong.png)
 
-- main : 운영 서버(Production)에 배포 브랜치
-- develop : 개발이 완료된 후 테스트 개발 서버(Develop) 브랜치
-- feature : 각 기능을 개발하는 브랜치, 기능 개발 단위로 브랜치 생성 {CHORONG-001}
+- **main** : 운영 서버(Production)에 배포 브랜치
+- **develop** : 개발이 완료된 후 테스트 개발 서버(Develop) 브랜치
+- **feature** : 각 기능을 개발하는 브랜치, 기능 개발 단위로 브랜치 생성 {CHORONG-001}
