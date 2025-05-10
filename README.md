@@ -47,7 +47,7 @@
 | STYLE     | 코드 포맷팅, 코드 변경이 없는 경우 |
 | REFACTOR  | 코드 리팩토링 |
 
-## Branch 전략
+## Branch
 
 ![Git Flow](https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/chorong.png)
 
