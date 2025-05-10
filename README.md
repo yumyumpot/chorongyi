@@ -51,6 +51,6 @@
 
 ![Git Flow](https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/chorong.png)
 
-- main : 서버(Production)에 배포 브랜치
-- develop : 개발이 완료된 후 테스트 서버 브랜치
+- main : 운영 서버(Production)에 배포 브랜치
+- develop : 개발이 완료된 후 테스트 개발 서버(Develop) 브랜치
 - feature : 각 기능을 개발하는 브랜치, 기능 개발 단위로 브랜치 생성 {CHORONG-001}
