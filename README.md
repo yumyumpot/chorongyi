@@ -1,11 +1,10 @@
 # chorongyi 
 
----
 ## Hecto AI Challenge
 >중고차 이미지를 분석해 차종을 분류하는 AI 모델 개발 </br>
 >핵심 기능만 구현한 MVP 모델 목표
 
----
+
 ## Architecture
 ### Server Architecture
 
@@ -14,15 +13,12 @@
 
 ## Tech Stack
 
----
 - Python, FastAPI, SQLAlchemy, Pixi
 - PyTorch, Cuda
 - PostgreSQL, Docker
 - React
 
 ## Developer
-
----
 
 |                 |   |
 | --- | --- |
@@ -32,7 +28,6 @@
 
 ## Convention
 
----
 ## Commit
 
 | 태그 이름  | 설명                            |
