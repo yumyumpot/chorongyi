@@ -2,7 +2,6 @@
 authors = [{name = "이선호", email = "j76067469@gmail.com"}]
 dependencies = []
 name = "ai"
-requires-python = ">= 3.10"
 version = "0.1.0"
 
 [build-system]
@@ -34,9 +33,16 @@ torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/
 
 [tool.pixi.tasks]
 
+[tool.pytest.ini_options]
+pythonpath = "."
+test_image_size = "244"
+test_batch_size = "4"
+
 [tool.pixi.dependencies]
 cowpy = ">=1.1.5,<2"
 typing = ">=3.10.0.0,<4"
 numpy = ">=2.2.5,<3"
 pandas = ">=2.2.3,<3"
+pytest = ">=8.3.5,<9"
+python = "3.10.*"
 

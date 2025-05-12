@@ -1,5 +1,6 @@
 import logging
 
+from ai.tests.data.test_dataset import test_dataset_loading
 from cowpy.cow import Cowacter
 
 logger = logging.getLogger(__name__)
@@ -15,7 +16,7 @@ def banner_message():
 
 def run_tests():
     logger.info("테스트 실행 시작")
-    from tests.test_dataset import test_dataset_loading
+
     test_dataset_loading()
     logger.info("테스트 실행 완료")
 
