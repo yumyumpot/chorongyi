@@ -1,12 +1,10 @@
 import logging
 import torch
 from pathlib import Path
-from src.data.dataset import create_dataloaders
 from torch.utils.data import DataLoader
 import pytest
 
 from ai.src.data.dataset import CarClassificationDataset
-from ai.tests.conftest import test_transform
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / "data" / "processed"
