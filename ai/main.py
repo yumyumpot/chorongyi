@@ -2,6 +2,7 @@ import logging
 
 from cowpy.cow import Cowacter
 from src.data.dataset import run_dataset
+from scripts.download_data import checkout_opencv
 logger = logging.getLogger(__name__)
 
 logging.basicConfig(
@@ -16,4 +17,3 @@ def banner_message():
 
 if __name__ == "__main__":
     banner_message()
-    run_dataset()

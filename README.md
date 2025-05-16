@@ -14,8 +14,8 @@
 ## Tech Stack
 
 - Python, FastAPI, SQLAlchemy, Pixi
-- PyTorch, Cuda
-- PostgreSQL, Docker
+- PyTorch, Cuda, openCV
+- PostgreSQL, Docker, S3
 - React
 
 ## Developer
