@@ -9,34 +9,35 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [tool.pixi.project]
-channels = ["https://prefix.dev/conda-forge"]
+channels = ["conda-forge", "nvidia"]
 platforms = ["linux-64"]
 
 [tool.pixi.system-requirements]
-cuda = "12.0"
+cuda = "12.2"
 
 [tool.pixi.environments]
 cpu = ["cpu"]
 gpu = ["gpu"]
 default = ["gpu"]
 
+[tool.pixi.feature.gpu.dependencies]
+python = "3.10.*"
+cudatoolkit = ">=11.8,<12"
+cudnn = ">=8.9,<9"
+
 [tool.pixi.feature.gpu.pypi-dependencies]
-#pytorch-gpu = ">=2.7.0,<3"
-#cuda-version = ">=12.4,<13"
 torch = { version = ">=2.5.1", index = "https://download.pytorch.org/whl/cu124" }
 torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/cu124" }
 
 [tool.pixi.feature.cpu.pypi-dependencies]
-#pytorch-cpu = ">=2.7.0,<3"
 torch = { version = ">=2.5.1", index = "https://download.pytorch.org/whl/cpu" }
 torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/cpu" }
+opencv-python = ">=4.7.0"
 
 [tool.pixi.tasks]
-
-[tool.pytest.ini_options]
-pythonpath = "."
-test_image_size = "244"
-test_batch_size = "4"
+opencv_pythonpath = "PYTHONPATH=$(find.pixi/build/opencv/ -type d -name '*cv2*' | head -n 1) python -c \"import cv2; print(cv2.__version__)\""
+build_opencv_cuda = "bash ./build_opencv.sh"
+preprocess = "python scripts/preprocess.py"
 
 [tool.pixi.dependencies]
 cowpy = ">=1.1.5,<2"
@@ -47,4 +48,7 @@ pytest = ">=8.3.5,<9"
 python = "3.10.*"
 scikit-learn = ">=1.6.1,<2"
 boto3 = ">=1.38.13,<2"
+matplotlib = ">=3.10.3,<4"
+jupyter = ">=1.1.1,<2"
+notebook = ">=7.4.2,<8"
 
