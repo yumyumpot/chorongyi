@@ -4,9 +4,7 @@ version = "0.1.0"
 description = "Backend for chorongyi project"
 authors = ["kse1660 <kse1660@gmail.com>"]
 
-packages = [
-  { include = "app" }
-]
+packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -20,4 +18,3 @@ pymysql = "^1.0.2"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
