@@ -5,10 +5,10 @@ services:
     image: mysql:8.0
     container_name: chorongyi-mysql
     environment:
-      MYSQL_ROOT_PASSWORD: chfhd2
-      MYSQL_USER: chorong
-      MYSQL_PASSWORD: chorongpw
-      MYSQL_DATABASE: chorongyi
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
     ports:
       - "3306:3306"
     volumes:
@@ -20,12 +20,12 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=mysql+pymysql://chorong:chorongpw@db:3306/chorongyi
-      - DB_NAME=chorongyi
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_USER=chorong
-      - DB_PASSWORD=chorongpw
+      - DATABASE_URL=${DATABASE_URL}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
     volumes:
       - ./:/app
     ports:
