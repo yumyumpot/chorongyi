@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    ports:
+      - "3306:3306"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        APP_ENV: ${APP_ENV:-prod}
+    environment:
+      - APP_ENV=${APP_ENV:-prod}
+    volumes:
+      - ./backend:/app
+    command: >
+      /bin/sh -c "if [ \"$APP_ENV\" = \"dev\" ]; then uvicorn main:app --host 0.0.0.0 --port 8000 --reload; else uvicorn main:app --host 0.0.0.0 --port 8000; fi"
