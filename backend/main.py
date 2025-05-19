@@ -1,9 +1,10 @@
-from fastapi import FastAPI, Depends, HTTPException
-from sqlalchemy.orm import Session
-from sqlalchemy import text
 from app.db.session import SessionLocal
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy import text
+from sqlalchemy.orm import Session
 
 app = FastAPI()
+
 
 # DB 세션을 의존성으로 제공
 def get_db():
@@ -12,6 +13,7 @@ def get_db():
         yield db
     finally:
         db.close()
+
 
 # DB 연결 테스트용 엔드포인트
 @app.get("/health/db")
