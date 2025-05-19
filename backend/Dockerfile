@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# 먼저 pyproject.toml과 poetry.lock만 복사 (의존성 설치를 위해)
+# pyproject.toml 먼저 복사해서 의존성 설치
 COPY pyproject.toml poetry.lock /app/
 
 # poetry 설치 및 의존성 설치
@@ -10,11 +10,15 @@ RUN pip install --upgrade pip && pip install poetry \
     && poetry config virtualenvs.create false \
     && poetry install --no-root --no-interaction --no-ansi
 
-# 이제 나머지 소스 코드 복사
+# 나머지 소스 복사
 COPY . /app
 
-# PYTHONPATH 환경 변수 설정 (app 폴더를 패키지 경로로 인식)
+# PYTHONPATH 설정
 ENV PYTHONPATH=/app
 
-# uvicorn으로 앱 실행 (app.main:app가 아닌 main:app 사용하시는 경우 main:app)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# 환경 변수로 dev/prod 구분 (기본값 prod)
+ARG APP_ENV=prod
+ENV APP_ENV=${APP_ENV}
+
+# dev면 reload 실행, 아니면 prod 실행
+CMD ["/bin/sh", "-c", "if [ \"$APP_ENV\" = \"dev\" ]; then uvicorn main:app --host 0.0.0.0 --port 8000 --reload; else uvicorn main:app --host 0.0.0.0 --port 8000; fi"]
