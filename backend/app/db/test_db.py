@@ -1,5 +1,6 @@
-from sqlalchemy import text
 from app.db.session import SessionLocal
+from sqlalchemy import text
+
 
 def test_db_connection():
     try:
@@ -11,6 +12,7 @@ def test_db_connection():
         print(f"DB 연결 실패: {e}")
     finally:
         db.close()
+
 
 if __name__ == "__main__":
     test_db_connection()
