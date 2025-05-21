@@ -1,8 +1,6 @@
 import logging
 
 from cowpy.cow import Cowacter
-from src.data.dataset import run_dataset
-from scripts.download_data import checkout_opencv
 logger = logging.getLogger(__name__)
 
 logging.basicConfig(
