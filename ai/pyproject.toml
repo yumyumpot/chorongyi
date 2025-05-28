@@ -38,6 +38,7 @@ opencv-python = ">=4.7.0"
 opencv_pythonpath = "PYTHONPATH=$(find.pixi/build/opencv/ -type d -name '*cv2*' | head -n 1) python -c \"import cv2; print(cv2.__version__)\""
 build_opencv_cuda = "bash ./build_opencv.sh"
 preprocess = "python scripts/preprocess.py"
+train = "python scripts/train.py"
 
 [tool.pixi.dependencies]
 cowpy = ">=1.1.5,<2"
