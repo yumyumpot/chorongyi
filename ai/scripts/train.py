@@ -145,11 +145,11 @@ class BaseModel(nn.Module):
         self.feature_dim = self.backbone.classifier[1].in_features
         self.backbone.classifier = nn.Identity()
         self.head = nn.Linear(self.feature_dim, num_classes)  # 분류기
-        print(f"backbone : {self.backbone}")
+#        print(f"backbone : {self.backbone}")
 
     def forward(self, x):
         x = self.backbone(x)
-        print(f"backbone output: {x.shape}")
+#        print(f"backbone output: {x.shape}")
         x = self.head(x)
         return x
 
