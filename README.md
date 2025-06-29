@@ -3,10 +3,8 @@
 ## Hecto AI Challenge
 >중고차 이미지를 분석해 차종을 분류하는 AI 모델 개발 </br>
 >상위 50위 안에 진입은 하지 못하고 대회 종료되었습니다.
->그래도 몇등까지 기록되었는지 공유 드리고 이를 기반으로 다음 프로젝트에 좋은 성과를 이룰 수 있도록 화이팅입니다.
 ![Git Flow](https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/ranking.png)
 ![Git Flow](https://raw.githubusercontent.com/yumyumpot/chorongyi/main/ai/docs/model.png)
-
 
 ## Tech Stack
 
@@ -19,7 +17,7 @@
 
 |                 |   | |
 | --- | --- | --- |
-| [양원준(yangwonjoon)](https://github.com/yangwonjoon) | [김소은]() | [이선호(08166)](https://github.com/08166) |
+| [양원준(yangwonjoon)](https://github.com/yangwonjoon) | [김소은](https://github.com/kse1660) | [이선호(08166)](https://github.com/08166) |
 | mvp ~ front ~ AI  |  mvp ~ backend ~ AI  | mvp ~ backend ~ AI |
 
 
